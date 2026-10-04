@@ -4,7 +4,7 @@ Static engineering portfolio for Dan Kaye (Penn MEAM, class of 2030), hosted on 
 
 ## Structure
 
-- `index.html`: homepage. One large image per project, each with a caption row (title, one factual line, years). Links to the project page.
+- `index.html`: homepage. Header reads "Dan Kaye / Design portfolio". Each project is a `work-item`: a large image offset to one side and text on the other, alternating sides (`.flip` puts the image on the right). Text block: years, title, one factual line, a "Click for" outline of what the project page covers (high level, a few words), and a "View project" link. Hovering shows a soft halo behind the image (images use `mix-blend-mode: multiply` so their white backgrounds let the halo through).
 - `projects/*.html`: one page per project. Layout: back link, h1, one-sentence lede, facts row (`dl.facts`), hero image, then prose sections in the order problem → decisions → result → what changed. Images go in `figure.figure` (single) or `div.pair` (two side by side). Ends with a `nav.next` linking previous and next projects.
 - `about.html`: short bio, skills, competitions and leadership list.
 - `assets/site.css`: all styles. Light-only on purpose: every image has a white background so parts appear to float.
@@ -22,6 +22,7 @@ Static engineering portfolio for Dan Kaye (Penn MEAM, class of 2030), hosted on 
 - Confident, plain language. Never invent facts, numbers, tests or processes Dan hasn't confirmed.
 - Say what Dan personally owned on team projects.
 - The ball joints on BikePack anchors are purchased clamps; don't imply he designed them.
+- BikePack concept drawings (`sketch-*.jpg`) were drawn on paper and had contrast increased; keep the note saying so under them. In the concept, the anchors were polyester webbing loops (Part A).
 - Walter P Moore work is cleared for the portfolio. Describe it as modeling and documentation, not structural design.
 - Penn Electric Racing work is not on the site yet; check with Dan before adding anything, since the team may limit what can be posted.
 
