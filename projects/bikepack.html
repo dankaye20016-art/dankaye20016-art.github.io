@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BikePack · Dan Kaye</title>
+<meta name="description" content="A backpack carrying system for folded bikes: designed, tested to failure and redesigned.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&family=Geist+Mono:wght@400&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="site-header">
+    <div>
+      <a class="site-name" href="../">Dan Kaye</a>
+      <div class="site-sub">Mechanical Engineering, University of Pennsylvania</div>
+    </div>
+    <nav class="site-nav" aria-label="Main">
+      <a href="../">Work</a>
+      <a href="../about.html">About</a>
+    </nav>
+  </header>
+
+  <main class="project">
+    <a class="back" href="../">← Work</a>
+    <h1>BikePack</h1>
+    <p class="lede">A carrying system that clips onto a folded bike and wears like a backpack. We built it, tested it until the anchors broke, and redesigned the part that failed.</p>
+
+    <dl class="facts">
+      <div><dt>Role</dt><dd>All CAD; sewed the full textile assembly</dd></div>
+      <div><dt>Team</dt><dd>Three-person capstone team</dd></div>
+      <div><dt>Tools</dt><dd>Onshape, Bambu X1 Carbon, PETG</dd></div>
+      <div><dt>Year</dt><dd>2026, engineering academy capstone</dd></div>
+    </dl>
+
+    <figure class="hero"><img src="../assets/img/bikepack/v2-assembly.png" width="530" height="722" alt="Final design: back plate with horizontal rails and two shoulder plates, each with a locking anchor"></figure>
+
+    <div class="prose">
+      <h2>The problem</h2>
+      <p>Most folding bikes weigh 12 to 15 kg, and once folded they are an awkward shape to carry onto a train or up a flight of stairs. We started out designing a full folding bike, then narrowed the scope to the carrying system after weighing hinge fabrication, budget and our timeline. That cut let us go deep on one problem instead of shallow on many.</p>
+
+      <h2>First version</h2>
+      <p>Printed PETG back and shoulder plates carry rails of indexed holes. Sliding anchors ride the rails and hold off-the-shelf ball-joint clamps that grip the bike frame, so the anchor positions adjust to both the bike and the wearer. Each anchor held its position with a friction fit: flexible nubs that snapped into the rail holes as it slid.</p>
+    </div>
+
+    <div class="pair">
+      <figure><div class="frame"><img src="../assets/img/bikepack/v1-assembly.png" width="641" height="742" alt="First version: back plate with vertical rails and two shoulder plates"></div><figcaption>First version, vertical rails</figcaption></figure>
+      <figure><div class="frame"><img src="../assets/img/bikepack/v1-anchor.png" width="702" height="470" alt="First version anchor, exploded: printed base, ball clamp and cap"></div><figcaption>First version anchor, friction fit</figcaption></figure>
+    </div>
+
+    <div class="prose">
+      <h2>Testing</h2>
+      <ul>
+        <li><strong>Assembly time:</strong> 20 people attached the BikePack to a bike in an average of 46.4 seconds, against a 60-second target.</li>
+        <li><strong>Adjustability:</strong> three wearers from 5'4" to 6'1" averaged 2.67 discomfort points on a scale where 7 is a failure.</li>
+        <li><strong>Anchor strength:</strong> the anchors held 5, 10 and 15 kg and failed at 20 kg. One plate snapped and released its anchor, and the other anchor broke outright. All tested parts were printed at 100% infill.</li>
+      </ul>
+
+      <h2>Why it failed</h2>
+      <p>The rails ran vertically, so the bike's weight pulled straight along the direction the anchors slide. The same friction fit that made the anchors adjustable let them slip under load, which put the load on the nubs instead of the frame and wore them down every time they passed a hole. The center plate was also slightly too large for the printer, so it was printed in pieces and joined with friction fits, adding another weak point.</p>
+
+      <h2>Redesign</h2>
+      <ul>
+        <li><strong>Rails turned perpendicular to the load.</strong> With horizontal rails, the bike's weight can no longer slide the anchors, and the load goes into the back plate instead of the anchor.</li>
+        <li><strong>Spring-loaded locking pin.</strong> A spring holds the pin engaged in a rail hole. Pulling the key retracts it, so the anchor slides freely or comes out the end of the rail. It locks positively instead of relying on friction.</li>
+        <li><strong>One-piece center plate.</strong> Same size as before, printed in one piece on the same printer by orienting it at an unusual angle with a custom support strategy. That removed the weak joints entirely.</li>
+      </ul>
+      <p>The redesign passed the retest on every criterion the first version failed.</p>
+    </div>
+
+    <figure class="figure"><div class="frame"><img src="../assets/img/bikepack/v2-anchor.png" width="708" height="689" alt="Redesigned anchor, exploded: housing, ball clamp, cap, locking pin and key"></div><figcaption>Redesigned anchor with the spring-loaded locking pin and key</figcaption></figure>
+
+    <div class="prose">
+      <h2>Sewing</h2>
+      <p>The padded straps and covers are sewn over the printed plates. My first pass used single-layer seams with loose edges, which frayed and pulled apart. I re-sewed the assembly with neater lock stitches and whip stitches so it holds up to repeated loading.</p>
+    </div>
+
+    <nav class="next" aria-label="More projects">
+      <a href="drone.html"><span>Previous</span>Competition drone</a>
+      <a href="walter-p-moore.html" style="text-align:right"><span>Next</span>Walter P Moore</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <span>Dan Kaye</span>
+    <span>Mechanical Engineering, University of Pennsylvania</span>
+  </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Competition drone · Dan Kaye</title>
+<meta name="description" content="A competition drone that picks up packages from the ground, designed across two seasons.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&family=Geist+Mono:wght@400&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="site-header">
+    <div>
+      <a class="site-name" href="../">Dan Kaye</a>
+      <div class="site-sub">Mechanical Engineering, University of Pennsylvania</div>
+    </div>
+    <nav class="site-nav" aria-label="Main">
+      <a href="../">Work</a>
+      <a href="../about.html">About</a>
+    </nav>
+  </header>
+
+  <main class="project">
+    <a class="back" href="../">← Work</a>
+    <h1>Competition drone</h1>
+    <p class="lede">A drone that picks up a package by landing and rolling over it, built for the Technology Student Association drone challenge. The second build on the platform won the state competition.</p>
+
+    <dl class="facts">
+      <div><dt>Role</dt><dd>CAD and drawings for every custom part</dd></div>
+      <div><dt>Team</dt><dd>High school TSA team</dd></div>
+      <div><dt>Tools</dt><dd>Onshape, CNC carbon fiber, 3D printing, INAV</dd></div>
+      <div><dt>Result</dt><dd>State winner, 2026</dd></div>
+    </dl>
+
+    <figure class="hero"><img src="../assets/img/drone/gripper-build.png" width="757" height="546" alt="Assembled CAD render of the drone: carbon frame, ring prop guards and gripper with casters"></figure>
+
+    <div class="prose">
+      <h2>The problem</h2>
+      <p>The challenge was to pick up a package, carry it through an obstacle course and set it down. Hovering over a package to grab it blows it away with prop wash, and the whole drone had to fit an 18-inch go/no-go box at inspection.</p>
+
+      <h2>Ground-roll pickup</h2>
+      <p>Instead of grabbing from a hover, the drone lands and drives over the package.</p>
+      <ul>
+        <li><strong>Ball-plunger casters.</strong> I designed printed ball plungers into the gripper base. On landing, the claws close just far enough for the casters to touch the ground, and light throttle input rolls the drone in any direction. The pilot drives over the package, the claws close on it and the drone takes off. Prop wash never hits the package from above.</li>
+        <li><strong>One motor, spring return.</strong> A single motor winds a steel cable onto a spool, pulling both claws closed along a curved track. Two springs mounted above the track reopen the claws when the motor releases.</li>
+        <li><strong>Curved track.</strong> The track curves upward at its ends, which narrows the drone's profile so it fits through tighter gaps in the obstacle course.</li>
+        <li><strong>Stable pickup platform.</strong> We switched the flight controller firmware to INAV for barometer altitude hold, which kept the drone steady while the pilot and claw operator worked the pickup.</li>
+      </ul>
+    </div>
+
+    <div class="pair">
+      <figure><div class="frame"><img src="../assets/img/drone/gripper-build-exploded.png" width="709" height="724" alt="Exploded view of the frame plates, prop guard rings, claw motor and gripper"></div><figcaption>Exploded view: frame plates, prop guard rings and gripper</figcaption></figure>
+      <figure><div class="frame"><img src="../assets/img/drone/gripper-detail.png" width="821" height="620" alt="Gripper claw with exploded ball plunger: housing, ball and threaded cap"></div><figcaption>Gripper claw with the ball plunger exploded</figcaption></figure>
+    </div>
+
+    <div class="prose">
+      <h2>Fabrication</h2>
+      <p>The frame and prop guards are CNC-cut carbon fiber. The plungers and claws went through at least eight printed revisions on the school's printers before the final design. On this build every joint uses aluminum threaded inserts with steel screws, so printed parts can come apart and go back together without stripping.</p>
+
+      <h2>The first build</h2>
+      <p>The 2024–25 build proved the roll-over idea with motorized treads. The treads worked, but they made the drone far too heavy, their placement limited the claw until it was too weak, and the servos driving it sat on the prop guards, which caused problems of their own. That build also used cheaper components, and we paid for it in reliability.</p>
+      <p>The second build kept the concept and fixed the weaknesses: light passive casters in place of powered treads, one central motor-and-spring claw in place of guard-mounted servos, and better hardware throughout.</p>
+    </div>
+
+    <figure class="figure"><div class="frame"><img src="../assets/img/drone/tread-build.png" width="913" height="657" alt="CAD render of the first build with tread modules on each side"></div><figcaption>The 2024–25 tread build</figcaption></figure>
+
+    <div class="prose">
+      <h2>Result</h2>
+      <p>The second build won the state competition. We qualified for nationals but withdrew after an electronic speed controller failed during testing.</p>
+    </div>
+
+    <nav class="next" aria-label="More projects">
+      <a href="../"><span>Back</span>All work</a>
+      <a href="bikepack.html" style="text-align:right"><span>Next</span>BikePack</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <span>Dan Kaye</span>
+    <span>Mechanical Engineering, University of Pennsylvania</span>
+  </footer>
+</div>
+</body>
+</html>
